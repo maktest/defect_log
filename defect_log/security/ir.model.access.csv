@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_defect_log,access_defect_log,model_manufacturing_defect_log,,1,1,1,0
+access_defect_log_admin,access_defect_log_admin,model_manufacturing_defect_log,base.group_system,1,1,1,1

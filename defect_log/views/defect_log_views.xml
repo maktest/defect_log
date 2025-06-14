@@ -1,0 +1,47 @@
+<odoo>
+  <record id="view_defect_log_tree" model="ir.ui.view">
+    <field name="name">defect.log.tree</field>
+    <field name="model">manufacturing.defect.log</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="date"/>
+        <field name="production_id"/>
+        <field name="lot_id"/>
+        <field name="custom_lot"/>
+        <field name="qty"/>
+        <field name="weight"/>
+        <field name="status"/>
+        <field name="reason"/>
+        <field name="operator_id"/>
+      </list>
+    </field>
+  </record>
+
+  <record id="view_defect_log_form" model="ir.ui.view">
+    <field name="name">defect.log.form</field>
+    <field name="model">manufacturing.defect.log</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="date"/>
+          <field name="production_id"/>
+          <field name="lot_id"/>
+          <field name="custom_lot"/>
+          <field name="qty"/>
+          <field name="weight"/>
+          <field name="status"/>
+          <field name="reason"/>
+          <field name="operator_id"/>
+        </group>
+      </form>
+    </field>
+  </record>
+
+  <menuitem id="menu_defect_log_root" name="Журнал браку" sequence="25"/>
+  <menuitem id="menu_defect_log" name="Записи" parent="menu_defect_log_root" action="action_defect_log"/>
+  <record id="action_defect_log" model="ir.actions.act_window">
+    <field name="name">Журнал браку</field>
+    <field name="res_model">manufacturing.defect.log</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+</odoo>
